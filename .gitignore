@@ -1,0 +1,36 @@
+# ROS / Bagfiles e Gravações de Sensores
+*.bag
+*.db3
+*.mcap
+logs/
+bagfiles/
+
+# Pesos de Redes Neurais / Modelos Pré-treinados
+*.pth
+*.pt
+*.onnx
+*.weights
+checkpoints/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+
+# LaTeX / Build de Relatórios
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# IDEs e Sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
