@@ -1,18 +1,18 @@
-# Benchmark de SLAM e Sensoriamento para Robôs USAR
+# USAR Ground Robotics & SLAM Sensing Benchmark
 
-Dados experimentais, logs de sensoriamento e documentação do artigo científico:  
+[![Paper](https://img.shields.io/badge/Paper-Springer_LNCS-blue?style=flat-square&logo=springer&logoColor=white)](https://link.springer.com/)
+[![ROS 2](https://img.shields.io/badge/ROS_2-Humble%20%7C%20Galactic-22314E?style=flat-square&logo=ros&logoColor=white)](https://ros.org/)
+[![Linux](https://img.shields.io/badge/Linux-Debian%20%7C%20Ubuntu-A81D33?style=flat-square&logo=debian&logoColor=white)](https://debian.org/)
+[![Platforms](https://img.shields.io/badge/Robots-TurtleBot3%20%7C%20Jackal-FF6F00?style=flat-square)](https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/)
+
+Experimental benchmark data, sensory logs, and documentation for the research paper:  
 **"Comparative Evaluation of Low-Cost Sensing and Mapping Solutions for Teleoperated Ground Robots in Urban Search and Rescue (USAR)"**  
-*Apresentado no 27th International Symposium on Measurement and Control in Robotics (ISMCR 2026).*  
-*Publicado na Springer Lecture Notes in Computer Science (LNCS).*
-
-[![Springer](https://img.shields.io/badge/Springer-LNCS-blue?style=flat-square&logo=springer&logoColor=white)](https://link.springer.com/)
-[![ROS 2](https://img.shields.io/badge/ROS-2-22314E?style=flat-square&logo=ros&logoColor=white)](https://ros.org/)
-[![Linux](https://img.shields.io/badge/Linux-Debian-A81D33?style=flat-square&logo=debian&logoColor=white)](https://debian.org/)
-[![Robôs](https://img.shields.io/badge/Rob%C3%B4s-TurtleBot3%20%7C%20Jackal-FF6F00?style=flat-square)](https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/)
+*Presented at the 27th International Symposium on Measurement and Control in Robotics (ISMCR 2026).*  
+*Published in Springer Lecture Notes in Computer Science (LNCS).*
 
 ---
 
-## Autores e Afiliação
+## 👥 Authors & Affiliation
 
 * Fernando P. Machado
 * Kawãn F. S. Mendes
@@ -22,57 +22,67 @@ Dados experimentais, logs de sensoriamento e documentação do artigo científic
 * Marlon M. López-Flores
 * Paulo Fernando Ferreira Rosa
 
-**Laboratório de Robótica RoboIME — Instituto Militar de Engenharia (IME)**, Rio de Janeiro, Brasil.
+**RoboIME Robotics Laboratory — Instituto Militar de Engenharia (IME)**, Rio de Janeiro, Brazil.
 
 ---
 
-## Visão Geral da Pesquisa
+## 🎯 Research Overview
 
-Em operações de Busca e Salvamento Urbano (USAR - *Urban Search and Rescue*), robôs móveis precisam navegar em ambientes colapsados, sem sinal de GPS, com obstáculos desestruturados, fumaça e baixa luminosidade.
+In Urban Search and Rescue (USAR) missions, mobile robots operate in unstructured, GPS-denied environments with dense particulate matter, debris, and variable illumination.
 
-Este repositório reúne os dados do benchmark experimental realizado no IME comparando soluções de sensoriamento de baixo custo e algoritmos de mapeamento espacial (SLAM) embarcados em plataformas terrestres autônomas e teleoperadas (**TurtleBot3** e **Clearpath Jackal**):
+This repository compiles empirical benchmark data gathered at IME evaluating low-cost perception sensors and Simultaneous Localization and Mapping (SLAM) algorithms deployed on autonomous and teleoperated unmanned ground vehicles (**TurtleBot3** and **Clearpath Jackal**):
 
-1. **Sensores de Profundidade Avaliados:**
-   - Câmera Estéreo RGB-D: **Intel RealSense D435**
-   - Câmera Monocular RGB: **Logitech C920e** acoplada a redes neurais de estimativa de profundidade (**MiDaS** e **MapAnything**)
-2. **Sistemas LiDAR:**
-   - LiDAR Planar 2D: **Robotis LDS-02**
-   - LiDAR Multifeixe 3D: **Ouster OS1**
-3. **Algoritmos de SLAM Avaliados:**
-   - **Google Cartographer** (SLAM 2D/3D baseado em grafo)
-   - **Gmapping** (Filtro de partículas Rao-Blackwellizado)
-   - **ORB-SLAM3** (Visual-Inercial monocular/estéreo)
-
----
-
-## Minhas Contribuições Técnicas (João Victor Pariz)
-
-* **Integração das Plataformas Físicas:** Montagem mecânica, distribuição de alimentação e acoplamento dos sensores na plataforma TurtleBot3.
-* **Ambiente e Drivers em ROS 2:** Configuração do ambiente em Linux Debian/Ubuntu e parametrização dos nós do LiDAR LDS-02 e da câmera RealSense D435.
-* **Ensaios Experimentais e Coleta de Dados:** Execução das baterias de testes em pista de obstáculos USAR, coleta de logs brutos, medição de densidade de nuvens de pontos e consumo de CPU/RAM em tempo de execução.
+1. **Depth Sensing Modalities:**
+   - Stereo RGB-D: **Intel RealSense D435**
+   - Monocular RGB: **Logitech C920e** paired with monocular depth estimation neural networks (**MiDaS** and **MapAnything**)
+2. **LiDAR Systems:**
+   - 2D Planar LiDAR: **Robotis LDS-02**
+   - 3D Multibeam LiDAR: **Ouster OS1**
+3. **SLAM Algorithms Evaluated:**
+   - **Google Cartographer** (2D/3D Graph-based SLAM)
+   - **Gmapping** (Rao-Blackwellized particle filter)
+   - **ORB-SLAM3** (Visual-Inertial monocular and stereo SLAM)
 
 ---
 
-## Estrutura do Repositório
+## 🔬 Technical Contributions (João Victor Pariz)
+
+* **Hardware Integration & Mechatronics:** Physical assembly, power distribution harness, and mechanical sensor mounting on the TurtleBot3 platform.
+* **ROS 2 Driver Stack & Linux Environment:** Configuration of the Debian/Ubuntu real-time environment and parameter tuning for the LDS-02 LiDAR and Intel RealSense D435 ROS 2 nodes.
+* **Empirical Trials & Data Acquisition:** Conducted standardized obstacle-course trials in a simulated USAR arena; collected raw sensor logs; measured point-cloud density, runtime latency, and CPU/RAM utilization footprints.
+
+---
+
+## 📂 Repository Structure
 
 ```
 benchmark-slam-usar/
-├── dados_experimentos/          # Tabelas geradas durante os ensaios práticos
+├── dados_experimentos/          # Raw tabular data collected during empirical trials
 │   ├── mapanything_2026-08-07_1306.md
 │   ├── midas_2026-08-07_0740.md
 │   ├── orbslam3_2026-08-07_1316.md
 │   └── realsense_2026-08-07_1322.md
-├── analisar_benchmark.py        # Script para exibição das métricas e tabelas no terminal
-├── Dados Artigo.xlsx            # Métricas quantitativas consolidadas (latência, CPU, memória e pontos)
-├── Paper_ISMCR2026_Springer_LNCS.pdf # Preprint do artigo completo aceito na Springer
+├── analisar_benchmark.py        # Python CLI analyzer to process and display benchmark metrics
+├── Dados Artigo.xlsx            # Consolidated quantitative metrics (latency, CPU, memory, point density)
+├── Paper_ISMCR2026_Springer_LNCS.pdf # Accepted preprint paper (Springer LNCS)
 └── README.md
 ```
 
 ---
 
-## Como Citar este Trabalho
+## 📊 Quick Start
 
-Caso utilize os dados deste benchmark em sua pesquisa, por favor cite:
+Run the analytical CLI tool to inspect the benchmark results directly in your terminal:
+
+```bash
+python analisar_benchmark.py
+```
+
+---
+
+## 📑 Citation
+
+If you use these benchmark datasets or findings in your academic research, please cite:
 
 ```bibtex
 @inproceedings{machado2026usar,
@@ -87,5 +97,5 @@ Caso utilize os dados deste benchmark em sua pesquisa, por favor cite:
 
 ---
 
-## Licença
-Os dados e documentação deste repositório estão disponibilizados para fins acadêmicos e de pesquisa.
+## 📜 License
+The benchmark datasets and documentation in this repository are published for academic and research purposes.
