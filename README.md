@@ -62,6 +62,7 @@ benchmark-slam-usar/
 │   ├── midas_2026-08-07_0740.md
 │   ├── orbslam3_2026-08-07_1316.md
 │   └── realsense_2026-08-07_1322.md
+├── analisar_benchmark.py        # Script para exibição das métricas e tabelas no terminal
 ├── Dados Artigo.xlsx            # Métricas quantitativas consolidadas (latência, CPU, memória e pontos)
 ├── Paper_ISMCR2026_Springer_LNCS.pdf # Preprint do artigo completo aceito na Springer
 └── README.md
