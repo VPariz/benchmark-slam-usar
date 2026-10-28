@@ -2,6 +2,7 @@
 
 [![Benchmark CI](https://github.com/VPariz/benchmark-slam-usar/actions/workflows/ci.yml/badge.svg)](https://github.com/VPariz/benchmark-slam-usar/actions/workflows/ci.yml)
 [![Paper](https://img.shields.io/badge/Paper-Springer_LNCS-blue?style=flat-square&logo=springer&logoColor=white)](https://link.springer.com/)
+[![Preprint PDF](https://img.shields.io/badge/Preprint-Download_(PDF)-red?style=flat-square&logo=adobeacrobatreader)](docs/paper/Paper_ISMCR2026_Preprint.pdf)
 [![ROS 2](https://img.shields.io/badge/ROS_2-Humble%20%7C%20Galactic-22314E?style=flat-square&logo=ros&logoColor=white)](https://ros.org/)
 [![Linux](https://img.shields.io/badge/Linux-Debian%20%7C%20Ubuntu-A81D33?style=flat-square&logo=debian&logoColor=white)](https://debian.org/)
 [![Platforms](https://img.shields.io/badge/Robots-TurtleBot3%20%7C%20Jackal-FF6F00?style=flat-square)](https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/)
@@ -59,14 +60,18 @@ This repository compiles empirical benchmark data gathered at IME evaluating low
 
 ```
 benchmark-slam-usar/
-├── dados_experimentos/          # Raw tabular data collected during empirical trials
+├── dados_experimentos/              # Raw tabular data collected during empirical trials
+│   ├── metricas_consolidadas_artigo.xlsx # Consolidated quantitative metrics (latency, CPU, memory, point density)
 │   ├── mapanything_2026-08-07_1306.md
 │   ├── midas_2026-08-07_0740.md
 │   ├── orbslam3_2026-08-07_1316.md
 │   └── realsense_2026-08-07_1322.md
-├── analisar_benchmark.py        # Python CLI analyzer to process and display benchmark metrics
-├── Dados Artigo.xlsx            # Consolidated quantitative metrics (latency, CPU, memory, point density)
-├── Paper_ISMCR2026_Springer_LNCS.pdf # Accepted preprint paper (Springer LNCS)
+├── docs/
+│   └── paper/
+│       └── Paper_ISMCR2026_Preprint.pdf  # Accepted author preprint paper (Springer LNCS)
+├── analisar_benchmark.py            # Python CLI analyzer to process and display benchmark metrics
+├── requirements.txt                 # Python dependencies
+├── LICENSE                          # MIT License
 └── README.md
 ```
 

@@ -1,2 +1,4 @@
 dados_experimentos/** linguist-data=true
-Paper_ISMCR2026_Springer_LNCS.pdf linguist-documentation=true
+docs/** linguist-documentation=true
+*.pdf linguist-documentation=true
+*.xlsx linguist-data=true
