@@ -1,9 +1,11 @@
 # USAR Ground Robotics & SLAM Sensing Benchmark
 
+[![Benchmark CI](https://github.com/VPariz/benchmark-slam-usar/actions/workflows/ci.yml/badge.svg)](https://github.com/VPariz/benchmark-slam-usar/actions/workflows/ci.yml)
 [![Paper](https://img.shields.io/badge/Paper-Springer_LNCS-blue?style=flat-square&logo=springer&logoColor=white)](https://link.springer.com/)
 [![ROS 2](https://img.shields.io/badge/ROS_2-Humble%20%7C%20Galactic-22314E?style=flat-square&logo=ros&logoColor=white)](https://ros.org/)
 [![Linux](https://img.shields.io/badge/Linux-Debian%20%7C%20Ubuntu-A81D33?style=flat-square&logo=debian&logoColor=white)](https://debian.org/)
 [![Platforms](https://img.shields.io/badge/Robots-TurtleBot3%20%7C%20Jackal-FF6F00?style=flat-square)](https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
 
 Experimental benchmark data, sensory logs, and documentation for the research paper:  
 **"Comparative Evaluation of Low-Cost Sensing and Mapping Solutions for Teleoperated Ground Robots in Urban Search and Rescue (USAR)"**  
